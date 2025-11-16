@@ -18,7 +18,9 @@ class AuthorForm
                 TextInput::make('username')
                     ->required(),
                 FileUpload::make('avatar')
-                    ->required(),
+                    ->required()
+                    ->directory('avatars')
+                    ->image(),
                 Textarea::make('bio')
                     ->required()
                     ->columnSpanFull(),
